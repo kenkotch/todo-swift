@@ -30,22 +30,18 @@ class AddItemViewController: UITableViewController, UITextFieldDelegate {
         textField.becomeFirstResponder()
     }
     
-//    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-//        textField.resignFirstResponder()
-//        return false
-//    }
-    
     @IBAction func cancel() {
         navigationController?.popViewController(animated: true)
-        
+        delegate?.addItemViewControllerDidCancel(self)
     }
     
     @IBAction func done() {
-        navigationController?.popViewController(animated: true)
+        
         let item = ChecklistItem()
         item.text = textField.text!
         item.checked = false
         delegate?.addItemViewController(self, didFinishAdding: item)
+        
     }
     
     override func tableView(_ tableView: UITableView, willSelectRowAt indexPath: IndexPath) -> IndexPath? {
@@ -53,6 +49,7 @@ class AddItemViewController: UITableViewController, UITextFieldDelegate {
     }
 
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+        
         let oldText = textField.text!
         let stringRange = Range(range, in:oldText)
         let newText = oldText.replacingCharacters(in: stringRange!, with: string)
@@ -63,4 +60,6 @@ class AddItemViewController: UITableViewController, UITextFieldDelegate {
         }
         return true
     }
+    
+    
 }

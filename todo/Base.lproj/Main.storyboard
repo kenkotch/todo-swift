@@ -7,6 +7,11 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13174"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="HelveticaNeue.ttc">
+            <string>HelveticaNeue-Bold</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--Checklists-->
         <scene sceneID="gC2-mh-B5w">
@@ -17,17 +22,24 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="checkmark" indentationWidth="10" reuseIdentifier="ChecklistItem" id="P4l-ct-QPV">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="detailDisclosureButton" indentationWidth="10" reuseIdentifier="ChecklistItem" id="P4l-ct-QPV">
                                 <rect key="frame" x="0.0" y="28" width="320" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="P4l-ct-QPV" id="NZ4-2R-Myi">
-                                    <rect key="frame" x="0.0" y="0.0" width="281" height="43.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="253" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" tag="1000" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GNG-P1-K1C">
-                                            <rect key="frame" x="15" y="11" width="251" height="21"/>
+                                            <rect key="frame" x="44" y="11" width="209" height="21"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" tag="1001" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="√" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TZY-E7-oCo">
+                                            <rect key="frame" x="23" y="11" width="13" height="21"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="22"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
@@ -50,9 +62,9 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="k8a-cY-9s8" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="624" y="70"/>
+            <point key="canvasLocation" x="622.5" y="69.718309859154928"/>
         </scene>
-        <!--Add  Item-->
+        <!--Add Item-->
         <scene sceneID="0jU-Nt-BAC">
             <objects>
                 <tableViewController id="Wuq-Vf-lCD" customClass="AddItemViewController" customModule="todo" customModuleProvider="target" sceneMemberID="viewController">
@@ -97,7 +109,7 @@
                             <outlet property="delegate" destination="Wuq-Vf-lCD" id="EU6-87-VfE"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Add  Item" id="K6y-47-byv">
+                    <navigationItem key="navigationItem" title="Add Item" id="K6y-47-byv">
                         <barButtonItem key="leftBarButtonItem" title="Cancel" id="gJF-D6-fKE">
                             <connections>
                                 <action selector="cancel" destination="Wuq-Vf-lCD" id="C6h-cz-5OL"/>
@@ -117,7 +129,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="z1h-3y-epX" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1583" y="70"/>
+            <point key="canvasLocation" x="1464" y="70"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="hvu-SW-d5N">
