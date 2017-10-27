@@ -41,7 +41,7 @@ class AddItemViewController: UITableViewController, UITextFieldDelegate {
     }
     
     @IBAction func done() {
-//        navigationController?.popViewController(animated: true)
+        navigationController?.popViewController(animated: true)
         let item = ChecklistItem()
         item.text = textField.text!
         item.checked = false
